@@ -1,0 +1,99 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 380px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(91, 33, 182, 0.12);
+  border: 1px solid rgba(91, 33, 182, 0.08);
+}
+
+.login-title {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #5b21b6;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-input {
+  padding: 10px 12px;
+  border: 2px solid #e9d5ff;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25);
+}
+
+.login-button {
+  padding: 10px 12px;
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.login-button:hover {
+  background: #6d28d9;
+}
+
+.google-button {
+  padding: 10px 12px;
+  background: #ffffff;
+  color: #111827;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.google-button:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* Sign up row */
+.signup-row {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-text {
+  color: #6b7280;
+}
+
+.signup-link {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Note: All selectors are already scoped via the .login-page parent */
