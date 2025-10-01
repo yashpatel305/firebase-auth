@@ -1,6 +1,6 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import React, { useState } from 'react'
-import { auth } from './firebase'
+import { auth, googleProvider } from './firebase'
 import { useNavigate, Link } from 'react-router-dom'
 import './SignUp.css'
 
@@ -18,6 +18,15 @@ function SignUp() {
       }
       catch(err){
         alert(err)
+      }
+    }
+    const handleGoogleSignup = async (e) => {
+      e.preventDefault();
+      try {
+        await signInWithPopup(auth, googleProvider)
+        navigate("/Home")
+      } catch (error) {
+        alert(error)
       }
     }
   return (
@@ -46,6 +55,9 @@ function SignUp() {
           />
           <button className="signup-button" type='submit'>Sign up</button>
         </form>
+        <div style={{ marginTop: 12 }}>
+          <button className="google-button" onClick={handleGoogleSignup}>Sign up with Google</button>
+        </div>
         <div className="signin-row" style={{ marginTop: 12, textAlign: 'center' }}>
           <span className="signin-text">Already have an account?</span>{' '}
           <Link className="signin-link" to="/">Sign in</Link>
